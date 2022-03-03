@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.ZoomMeetting"
+             BackgroundImageSource="meeting.jepg"
+             Title="Khám bệnh từ xa">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20,0,20,0" >
+                <Label Margin="0,20,0,0" Text="Nhập ID cuộc hộp" TextColor="Black" FontSize="15"/>
+                <Entry Placeholder="Nhập ID cuộc hộp" TextColor="Black" Text="{Binding MeetingID}"></Entry>
+                <Button CornerRadius="5" Text="Tham gia" Command="{Binding JoinMeetingCommand}"
+                    TextColor="White" BackgroundColor="#00CCCC"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.RegisterPage"
+             BackgroundColor="#CCFFFF"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Image Margin="0,40,0,20" Source="logoBenhVien.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Họ tên:" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Label Text="Email:" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Label Text="Mật khẩu:" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Label Text="Xác nhận:" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Entry x:Name="name" Grid.Column="1" Grid.Row="0"></Entry>
+                <Entry x:Name="email" Grid.Column="1" Grid.Row="1"></Entry>
+                <Entry x:Name="password" Grid.Column="1" Grid.Row="2"></Entry>
+                <Entry x:Name="cfpassword" Grid.Column="1" Grid.Row="3"></Entry>
+            </Grid>
+            <Button HeightRequest="50" Margin="10" Text="Đăng kí" FontAttributes="Bold" CornerRadius="20" Clicked="cmdSignIn_Clicked" x:Name="cmdSignIn" HorizontalOptions="Center"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

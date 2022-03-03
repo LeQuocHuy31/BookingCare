@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.UpdateHoSo"
+             Title="Thông tin người bệnh">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#EEEEEE">
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <StackLayout>
+                    <Frame Margin="10" HasShadow="True" IsClippedToBounds="True" Padding="0" BackgroundColor="White"  >
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="user.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Margin="10"/>
+                                <Label Text="Thông tin người bệnh" HeightRequest="30"  FontSize="16" FontAttributes="Bold" TextColor="Black"
+                        VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid Margin="10,0,20,0" RowSpacing="3"  Padding="10" >
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Họ tên" Grid.Row="0" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtHoTenBn" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Ngày sinh" Grid.Row="1" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtNgaySinhBn" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Giới tính" Grid.Row="2" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtGtBn" TextColor="Black" FontSize="16" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="CMND/CCCD" Grid.Row="3" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtCMND" TextColor="Black" FontSize="16" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Nghề nghiệp" Grid.Row="4" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtNghe" TextColor="Black" FontSize="16" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Quốc gia" Grid.Row="5" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtQG" TextColor="Black" FontSize="16" Grid.Row="5" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Dân tộc" Grid.Row="6" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtDT" TextColor="Black" FontSize="16" Grid.Row="6" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Số điện thoại" Grid.Row="7" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtSdt" TextColor="Black" FontSize="16" Grid.Row="7" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Email" Grid.Row="8" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtEmail" TextColor="Black" FontSize="16" Grid.Row="8" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Tỉnh" Grid.Row="9" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtTinh" TextColor="Black" FontSize="16" Grid.Row="9" Grid.Column="1" VerticalOptions="Center"/>
+                                </Grid>
+                            </StackLayout>
+                            <Button Margin="10" Text="Cập nhật thông tin bệnh nhân" FontSize="18" x:Name="cmdUpdateBN" Clicked="cmdUpdateBN_Clicked"
+                                TextColor="White" BackgroundColor="#00FF66"/>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame Margin="10,0,10,10" HasShadow="True" IsClippedToBounds="True" Padding="0" BackgroundColor="White">
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="user.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Margin="10"/>
+                                <Label Text="Thông tin người thân" HeightRequest="30"  FontSize="16" FontAttributes="Bold" TextColor="Black"
+                        VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Grid Margin="10,0,10,0" RowSpacing="3" Padding="10">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Họ tên" Grid.Row="0" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtHotenNt" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Quan hệ" Grid.Row="1" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtQuanHe" TextColor="Black" FontSize="16" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Số điện thoại" Grid.Row="2" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtSdtNt" TextColor="Black" FontSize="16" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+                                    <Label Text="Email" Grid.Row="3" Grid.Column="0" FontSize="15" TextColor="Black" VerticalOptions="Center"/>
+                                    <Entry x:Name="txtEmailNt" TextColor="Black" FontSize="16" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"/>
+                                </Grid>
+                            </StackLayout>
+                            <Button Margin="10" Text="Cập nhật thông tin người thân" FontSize="18" x:Name="cmdUpdateNT" Clicked="cmdUpdateNT_Clicked"
+                                TextColor="White" BackgroundColor="#00FF66"/>
+                        </StackLayout>
+                    </Frame>
+               </StackLayout>
+           </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

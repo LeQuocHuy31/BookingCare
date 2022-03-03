@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.Thanh_toan"
+             Title="Thanh toán"
+             BackgroundColor="#EEEEEE">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="10" Text="Chọn phương thức thanh toán" TextColor="Red" FontSize="20"/>
+            <ListView x:Name="lstphuongthuc" HeightRequest="400" HasUnevenRows="True" ItemSelected="lstphuongthuc_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="True" HeightRequest="40" CornerRadius="5" IsClippedToBounds="True" Margin="5">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding imgPT}" Aspect="Fill" VerticalOptions="Center" Grid.Column="0"/>
+                                    <Label Text="{Binding tenPT}" VerticalTextAlignment="Center" TextColor="Black" FontSize="15" Grid.Column="1"/>
+                                    <Image Source="muiten.jpg" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="2"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           <!-- <Frame HasShadow="True" HeightRequest="100" CornerRadius="5" IsClippedToBounds="True" Margin="10,0,10,5">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="benhvien.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="0"/>
+                    <Label Text="Thanh toán tại bênh viện" VerticalTextAlignment="Center" TextColor="Black" FontSize="15" Grid.Column="1"/>
+                </Grid>
+
+            </Frame>
+            <Frame HasShadow="True" HeightRequest="30" CornerRadius="5" IsClippedToBounds="True" Margin="10,0,10,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="ATM.jpg" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="0"/>
+                    <Label Text="Thanh toán bằng thẻ ATM" VerticalTextAlignment="Center" TextColor="Black" FontSize="15" Grid.Column="1"/>
+                    <Image Source="muiten.jpg" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="2"/>
+                </Grid>
+            </Frame>
+            <Frame HasShadow="True" HeightRequest="30" CornerRadius="5" IsClippedToBounds="True" Margin="10,5,10,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="momo.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="0"/>
+                    <Label Text="Thanh toán bằng MoMo" VerticalTextAlignment="Center" TextColor="Black" FontSize="15" Grid.Column="1"/>
+                    <Image Source="muiten.jpg" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" Grid.Column="2"/>
+                </Grid>
+            </Frame>-->
+
+            <Frame  HasShadow="True" CornerRadius="0" IsClippedToBounds="True" VerticalOptions="EndAndExpand">
+                <StackLayout >
+                    <Label Text="Chi phí thanh toán" TextColor="Black" FontSize="16"/>
+                    <Line Margin="0,5,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Tổng tiền khám:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" TextColor="Black"></Label>
+                        <Label x:Name="lblTongTien" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"  TextColor="Black"></Label>
+                        <Label Text="Phí tiện ích:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"  TextColor="Black"></Label>
+                        <Label x:Name="lblPhi" Text="0 đ" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"  TextColor="Black"></Label>
+                    </Grid>
+                    <Line Margin="0,5,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+                    <Grid Margin="0,20,0,0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Tổng tiền khám:" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0" TextColor="Black"></Label>
+                        <Label x:Name="lblTongTienKham" FontAttributes="Bold"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Column="1"  TextColor="Blue"></Label>
+                    </Grid>
+                    <Button Margin="0,20,0,0" Text="THANH TOÁN" FontSize="20" FontAttributes="Bold" x:Name="cmdThanhToan" Clicked="cmdThanhToan_Clicked"
+                    TextColor="White" BackgroundColor="Gray"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="flyout.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#CCFFFF">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0"
+                HorizontalOptions="CenterAndExpand">
+            <Image Margin="0,40,0,20" Source="logoBenhVien.png" HeightRequest="200" WidthRequest="200" HorizontalOptions="CenterAndExpand"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Email:" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Label Text="Mật khẩu:" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                <Entry x:Name="email" Grid.Column="1" Grid.Row="0"></Entry>
+                <Entry x:Name="password" Grid.Column="1" Grid.Row="1" IsPassword="True"></Entry>
+            </Grid>
+            <Button x:Name="cmdLogin" Text="Đăng nhập" Clicked="cmdLogin_Clicked" HorizontalOptions="Center" WidthRequest="180" CornerRadius="20"></Button>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Chưa có tài khoản?" Grid.Column="0" Grid.Row="0" HorizontalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Quên mật khẩu?" Grid.Column="1" Grid.Row="0" HorizontalOptions="Start">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1">
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Button  ContentLayout="Left,5" ImageSource="gg.png" Text="Đăng nhập bằng tài khoản Google" CornerRadius="20" TextColor="Black" BackgroundColor="AliceBlue"
+                     Clicked="cmdLoginWithGoogle_Clicked" x:Name="cmdLoginWithGoogle"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

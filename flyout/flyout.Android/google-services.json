@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "820010239436",
+    "firebase_url": "https://booking-6561c-default-rtdb.firebaseio.com",
+    "project_id": "booking-6561c",
+    "storage_bucket": "booking-6561c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820010239436:android:a92ac0c320ee6f04cbc969",
+        "android_client_info": {
+          "package_name": "com.companyname.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820010239436-3am4hqhog4gmupfkdt485fh2mnhut28n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7C6er4E3MR8gd-Bw1CKcvQd3KaXo2Hfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820010239436-3am4hqhog4gmupfkdt485fh2mnhut28n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820010239436:android:51e8858bf57edf00cbc969",
+        "android_client_info": {
+          "package_name": "com.companyname.flyout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820010239436-42qa67nqimhlmdj7fuq7t6mmbhq3vmcq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.flyout",
+            "certificate_hash": "588c296bda5d66c3ddfd331847806816f899c9e4"
+          }
+        },
+        {
+          "client_id": "820010239436-3am4hqhog4gmupfkdt485fh2mnhut28n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7C6er4E3MR8gd-Bw1CKcvQd3KaXo2Hfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820010239436-3am4hqhog4gmupfkdt485fh2mnhut28n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

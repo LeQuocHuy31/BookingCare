@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.home"
+             Title="Trang chủ">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="camera.png" x:Name="cmdZoomMeeting" Clicked="cmdZoomMeeting_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout >
+            <StackLayout x:Name="trangChu" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <StackLayout>
+                        <StackLayout>
+                            <CarouselView x:Name="SliderImage" IndicatorView="IndicatorView" HeightRequest="200">
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate >
+                                        <Image Source="{Binding url}" Aspect="AspectFill"></Image>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                            <IndicatorView x:Name="IndicatorView" IndicatorColor="Gray"
+                               SelectedIndicatorColor="DarkGray" IndicatorSize="10"
+                               VerticalOptions="Center">
+                            </IndicatorView>
+                        </StackLayout>
+
+                        <Button x:Name="cmdDatLich" CornerRadius="7" Margin="10,0,10,0" Text="ĐẶT LỊCH KHÁM" BackgroundColor="OrangeRed" 
+                         Clicked="cmdDatLich_Clicked"   TextColor="White" FontSize="20" FontAttributes="Bold"/>
+                        <Grid Margin="10,5,10,0" ColumnSpacing="10" RowSpacing="15" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Frame Grid.Column="0" Grid.Row="0" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="phieu.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit">
+                                        <Image.GestureRecognizers >
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Label Text="Phiếu khám bệnh" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame Grid.Column="1" Grid.Row="0" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="lich.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+                                    <Label Text="Lịch khám bệnh" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame Grid.Column="2" Grid.Row="0" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="virus" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+                                    <Label Text="Khai báo y tế" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="0" Grid.Row="1" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="Nha_khoa.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+                                    <Label Text="Nha Khoa" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="1" Grid.Row="1" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="nao.png" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+                                    <Label Text="Hồ sơ bệnh án" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="2" Grid.Row="1" HeightRequest="120" CornerRadius="5" IsClippedToBounds="True" HasShadow="True" Padding="0" BackgroundColor="AliceBlue">
+                                <StackLayout VerticalOptions="Center">
+                                    <Image Source="kinh_hien_vi.jpg" HeightRequest="50" WidthRequest="50" Aspect="AspectFit"/>
+                                    <Label Text="Xét nghiệm y học" HorizontalTextAlignment="Center" FontSize="14" TextColor="Blue"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                        <Label Margin="10,10,10,0" Text="Tin tức nổi bật" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame HasShadow="True" WidthRequest="200" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical" Margin="10" >
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="slide_hai.jpg" />
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Sức khỏe hàng ngày" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame HasShadow="True" WidthRequest="200" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical" Margin="10" >
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="slide_ba.jpg" />
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Tin tức covid" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame HasShadow="True" WidthRequest="200" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical" Margin="10" >
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="slide_bon.jpg" />
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Vacxin nano covad" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame HasShadow="True" WidthRequest="200" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical" Margin="10" >
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="tintuc_mot.jpg" />
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Chữa bệnh sốt huyết" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ScrollView>
+
+                        <Label Margin="10,10,10,10" Text="Chuyên khoa phổ biến" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal" Margin="0,0,20,20">
+                                <Frame Margin="10,0,5,0" HasShadow="True" WidthRequest="200" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="Khoa_than_kinh.jpg" />
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Thần kinh" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame Margin="0,0,5,0" HasShadow="True" WidthRequest="190" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="khoa_tieu_hoa.jpg"/>
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Tiêu Hóa" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame  Margin="0,0,5,0" HasShadow="True" WidthRequest="190" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="khoa_nhi.jpg"/>
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Khoa Nhi" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame  Margin="0,0,10,0" HasShadow="True" WidthRequest="190" CornerRadius="7" IsClippedToBounds="True" Padding="0" BackgroundColor="#EEEEEE">
+                                    <StackLayout Orientation="Vertical">
+                                        <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Padding="0">
+                                            <Image Source="Khoa_xuong_khop.jpg"/>
+                                        </Frame>
+                                        <Label Margin="10,0,0,0" Text="Xương Khớp" FontSize="18" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout x:Name="popupDatLich" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" VerticalOptions="EndAndExpand" IsVisible="false" >
+                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="End" RowSpacing="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"></RowDefinition>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="350"/>
+                    </Grid.ColumnDefinitions>
+                    <ContentView Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="FillAndExpand"  BackgroundColor="White">
+                        <StackLayout Margin="20">
+                            <Button x:Name="btnDatLichKham" Clicked="btnDatLichKham_Clicked" Text="Khám bệnh tại bệnh viện" FontSize="16" BackgroundColor="#3399FF" CornerRadius="5" TextColor="White" FontAttributes="Bold"></Button>
+                            <Button x:Name="btnDatLichKhamOnline" Clicked="btnDatLichKhamOnline_Clicked" Margin="0,15,0,0" Text="Khám bệnh từ xa" FontSize="16" BackgroundColor="#3399FF" CornerRadius="5" TextColor="White" FontAttributes="Bold"></Button>
+                        </StackLayout>
+                    </ContentView>
+                    <ContentView Grid.Row="1" Grid.Column="0" >
+                        <Image Source="close.jpg" HeightRequest="30" WidthRequest="30" x:Name="closebtn">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </ContentView>
+                </Grid>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

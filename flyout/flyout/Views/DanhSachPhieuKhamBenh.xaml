@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.DanhSachPhieuKhamBenh"
+             BackgroundColor="AliceBlue"
+             Title="Phiếu khám bệnh">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstDsKhamBenh" HasUnevenRows="True" ItemSelected="lstDsKhamBenh_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HeightRequest="170" HasShadow="True" IsClippedToBounds="True" CornerRadius="5" Margin="7,3,7,3">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Mã Phiếu:" TextColor="Blue" FontSize="14" VerticalTextAlignment="Center"/>
+                                        <Label Text="{Binding ma_phieu}" TextColor="Blue" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                        <Label Margin="20,0,0,0" Text="{Binding ngay_dat_lich}" TextColor="Blue" FontSize="14" HorizontalOptions="End" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <Line HeightRequest="1" BackgroundColor="Black"/>
+                                    <Grid Margin="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="bacsi.jpg" Aspect="AspectFit" HeightRequest="30" WidthRequest="30" Grid.Row="0" Grid.Column="0"/>
+                                        <Label Text="{Binding bac_si}" TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+                                        <Image Source="calendar.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="{Binding ngay}" TextColor="Black" FontAttributes="Bold" Grid.Row="1" Grid.Column="1"/>
+                                        <Image Source="hopyte.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30" Grid.Row="2" Grid.Column="0"/>
+                                        <Label Text="{Binding chuyen_khoa}" TextColor="Black" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"/>
+
+                                        <Label Text="{Binding stt}" TextColor="Blue" FontAttributes="Bold" FontSize="60" VerticalOptions="Center" HorizontalOptions="Center"
+                                               Grid.Row="0" Grid.Column="2" Grid.RowSpan="3"/>
+
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

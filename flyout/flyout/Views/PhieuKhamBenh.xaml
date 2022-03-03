@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.PhieuKhamBenh"
+             Title="A2123324354"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" Margin="7" HeightRequest="650">
+                <ScrollView VerticalScrollBarVisibility="Never" HeightRequest="640">
+                    <StackLayout>
+                        <Label Text="Bệnh viện Đại học Y dược TPHCM" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label Margin="0,20,0,0" Text="PHIẾU KHÁM BỆNH" TextColor="Black" HorizontalOptions="Center" FontSize="20"/>
+                        <Label Margin="0,20,0,0" x:Name="txtMaPhieu" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="txtPhongKham" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="txtChuyenKhoa" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="txtSTT" TextColor="Blue" HorizontalOptions="Center" FontAttributes="Bold" FontSize="60"/>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Ngày khám: " TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                            <Label x:Name="txtNgayKham" TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+
+                            <Label Text="Giờ khám dự kiến: " TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                            <Label x:Name="txtGioKham" TextColor="Black" FontAttributes="Bold" Grid.Row="1" Grid.Column="1"/>
+
+                            <Label Text="Họ tên: " TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+                            <Label x:Name="txtHoten" TextColor="Black" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"/>
+
+                            <Label Text="Giới tính: " TextColor="Black" Grid.Row="3" Grid.Column="0"/>
+                            <Label x:Name="txtGT" TextColor="Black" FontAttributes="Bold" Grid.Row="3" Grid.Column="1"/>
+
+                            <Label Text="Ngày sinh: " TextColor="Black" Grid.Row="4" Grid.Column="0"/>
+                            <Label x:Name="txtNgaySinh" TextColor="Black" FontAttributes="Bold" Grid.Row="4" Grid.Column="1"/>
+
+                            <Label Text="Tỉnh/Tp: " TextColor="Black" Grid.Row="5" Grid.Column="0"/>
+                            <Label x:Name="txtTinh" TextColor="Black" FontAttributes="Bold" Grid.Row="5" Grid.Column="1"/>
+
+                            <Label Text="BHYT: " TextColor="Black" Grid.Row="6" Grid.Column="0"/>
+                            <Label x:Name="txtBHYT" TextColor="Black" FontAttributes="Bold" Grid.Row="6" Grid.Column="1"/>
+
+                            <Label Text="Tiền khám: " TextColor="Black" Grid.Row="7" Grid.Column="0"/>
+                            <Label x:Name="txtTienKham" TextColor="Black" FontAttributes="Bold" Grid.Row="7" Grid.Column="1"/>
+
+                        </Grid>
+                        <Label Text="Vui lòng xác minh bảo hiểm y tế tại quầy 12, 13, 14 trước khi vào phòng khám"
+                           TextColor="Black" FontAttributes="Italic"/>
+                        <Line HeightRequest="1" BackgroundColor="Black"/>
+                        <Label Margin="0,20,0,0" Text="Ghi chú: Phiếu khám bệnh chỉ có giá trị trong ngày khám từ 6h30 - 16h30.Bệnh nhân khám lần đầu phải có giấy chuyển tuyến" FontAttributes="Italic" TextColor="Black"/>
+
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+            <Button x:Name="cmdHuyPhieu" Clicked="cmdHuyPhieu_Clicked"  CornerRadius="5" Text="Hủy phiếu khám bệnh"  Margin="5" VerticalOptions="EndAndExpand" 
+                    TextColor="White" BackgroundColor="#00CCCC"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

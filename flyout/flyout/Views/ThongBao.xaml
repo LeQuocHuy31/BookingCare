@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.ThongBao">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstThongBao">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="True" CornerRadius="5" IsClippedToBounds="True" HeightRequest="180" Padding="0" Margin="10,5,10,5">
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions></Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding tieu_de}" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start"></Label>
+                                        <Label Text="{Binding thoi_gian}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End"></Label>
+                                    </Grid>
+                                    <Line HeightRequest="2" BackgroundColor="Black"></Line>
+                                    <Label Text="{Binding noi_dung}" FontSize="16"></Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

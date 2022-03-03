@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.chonGio"
+             Title="Chọn giờ khám">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="10" >
+                <Label Text="Thời gian khám" TextColor="Black" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"/>
+                <Line HeightRequest="2" BackgroundColor="Black" />
+                <ListView x:Name="lstChiTiet" ItemSelected="lstChiTiet_ItemSelected" Margin="10">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding gio}" TextColor="Black" FontSize="Large" FontAttributes="Bold" 
+                                        HorizontalTextAlignment="Center"></Label>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

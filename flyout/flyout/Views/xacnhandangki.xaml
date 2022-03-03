@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.xacnhandangki"
+             Title="Xác nhận đăng kí">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#EEEEEE">
+                <Image Source="chamthan.png" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" Margin="10"/>
+                <Label Text="Vui lòng kiểm tra lại thông tin đã đăng kí trước khi bấm xác nhận" HeightRequest="50" TextColor="Black"
+                   VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <StackLayout Margin="10,10,0,0">
+                    <Label Margin="10,10,0,0" Text="Họ và tên" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtHoten" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Ngày sinh" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtNgaySinh" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Giới tính" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtGT" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="CMND/CCCD*" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtCMND" Margin="10,0,0,0" Placeholder="212817296" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Quốc gia*" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtQG" Margin="10,0,0,0"  FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Dân tộc" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtDt" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Nghề nghiệp" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtNgheNghiep" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Số điện thoại" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtSdt" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Email" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtEmail" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Label Margin="10,0,0,0" Text="Tỉnh/Thành phố*" TextColor="Black" FontSize="15"/>
+                    <Entry x:Name="txtTinh" Margin="10,0,0,0" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                    <Button Margin="0,0,10,10" Text="Xác nhận đăng kí" x:Name="cmdXacNhan" Clicked="cmdXacNhan_Clicked"
+                    TextColor="White" BackgroundColor="#00CCCC"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

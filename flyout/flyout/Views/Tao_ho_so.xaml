@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.Tao_ho_so"
+             Title="Tạo hồ sơ">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image  Margin="20,20,20,40" Source="ho_so.jpg" HeightRequest="150" />
+            <Label Text="Tạo hồ sơ khám bệnh" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+            <Label Text="Để có những trải nghiệm tốt nhất" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+            <!--<Button Margin="20,20,20,5" CornerRadius="5" Text="Đã từng khám, nhập số hồ sơ" TextColor="White" BackgroundColor="#00CCFF"/>-->
+            <Button x:Name="cmdTaoHoSo" Margin="20,20,20,10" CornerRadius="5" Text="Tạo hồ sơ Khám bệnh"  Clicked="cmdTaoHoSo_Clicked"
+                    TextColor="White" BackgroundColor="#00CCCC"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

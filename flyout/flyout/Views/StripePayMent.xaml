@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.StripePayMent"
+             BackgroundColor="AliceBlue"
+             Title="Thanh toán bằng visa">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="True" HeightRequest="320" CornerRadius="5" IsClippedToBounds="True" Margin="5,40,5,0" >
+                <StackLayout>
+                <Label Text="Number card" TextColor="Black" FontSize="14"/>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+                        <Entry x:Name="cardNo" Placeholder="Card No" Keyboard="Numeric" MaxLength="16" Grid.Column="0" TextColor="Black"/>
+                    <Image Source="visa.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30" Grid.Column="1"/>
+                </Grid>
+                <Label Text="Expire Year" TextColor="Black" FontSize="14"/>
+                    <Entry x:Name="expireYear" Placeholder="Expire Year" Keyboard="Numeric" MaxLength="2"  TextColor="Black"/>
+                <Label Text="Expire Month" TextColor="Black" FontSize="14"/>
+                    <Entry x:Name="expireMonth" Placeholder="Expire Month" Keyboard="Numeric" MaxLength="2"  TextColor="Black"/>
+                <Label Text="CVV" TextColor="Black" FontSize="14"/>
+                    <Entry x:Name="cvv" Placeholder="CVV" Keyboard="Numeric" MaxLength="3" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            <Frame  HasShadow="True" CornerRadius="0" IsClippedToBounds="True" VerticalOptions="EndAndExpand">
+                <StackLayout >
+                    <Label Text="Chi phí thanh toán" TextColor="Black" FontSize="16"/>
+                    <Line Margin="0,5,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Tổng tiền khám:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" TextColor="Black"></Label>
+                        <Label x:Name="lblTongTien" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"  TextColor="Black"></Label>
+                        <Label Text="Phí tiện ích:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"  TextColor="Black"></Label>
+                        <Label Text="0 đ" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"  TextColor="Black"></Label>
+                    </Grid>
+                    <Line Margin="0,5,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+                    <Grid Margin="0,20,0,0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Tổng tiền khám:" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Column="0" TextColor="Black"></Label>
+                        <Label x:Name="lblTongTienKham" FontAttributes="Bold"  HorizontalTextAlignment="End" VerticalTextAlignment="Center" Grid.Column="1"  TextColor="Blue"></Label>
+                    </Grid>
+                    <Button Margin="0,20,0,0" Text="THANH TOÁN" FontSize="20" FontAttributes="Bold" x:Name="cmdThanhToan" Clicked="cmdThanhToan_Clicked"
+                    TextColor="White" BackgroundColor="#00CCFF"/>
+                </StackLayout>
+            </Frame>
+            <!--<Button Margin="10,40,10,20" Text="Thanh Toán" Clicked="Button_Clicked" TextColor="White" BackgroundColor="#00CCCC"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

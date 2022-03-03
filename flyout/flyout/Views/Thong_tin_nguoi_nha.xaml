@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flyout.Views.Thong_tin_nguoi_nha"
+             Title="Thông tin người nhà">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView HeightRequest="450">
+                <StackLayout>
+                <Label Margin="10,10,0,0" Text="Tên người thân" TextColor="Black" FontSize="15"/>
+                <Entry x:Name="txtTen" Margin="10,0,0,0"  TextColor="Black" FontSize="15"/>
+                <Label Margin="10,0,0,0" Text="Quan hệ với bệnh nhân" TextColor="Black" FontSize="15"/>
+                <Entry x:Name="txtQuanHe" Margin="10,0,0,0" TextColor="Black" FontSize="15"/>
+                <Label Margin="10,10,0,0" Text="Số điện thoại*" TextColor="Black" FontSize="15"/>
+                <Entry x:Name="txtSdt" Margin="10,0,0,0"  TextColor="Black" FontSize="15"/>
+                <Label Margin="10,0,0,0" Text="Email người thân*" TextColor="Black" FontSize="15"/>
+                <Entry  x:Name="txtEmail" Keyboard="Email" Margin="10,0,0,0" TextColor="Black" FontSize="15"/>
+                </StackLayout>
+            </ScrollView>
+            <Grid HeightRequest="60" Margin="10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Text="Quay lại" FontSize="15" FontAttributes="Bold" TextColor="#3399FF" Grid.Column="0" BackgroundColor="#EEEEEE" BorderColor="Blue" BorderWidth="1"/>
+                <Button Text="Tiếp theo" FontSize="15" FontAttributes="Bold" TextColor="White" Grid.Column="1" BackgroundColor="#00CCFF" 
+                       x:Name="cmdtiepTuc" Clicked="cmdtiepTuc_Clicked" BorderColor="Blue" BorderWidth="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
